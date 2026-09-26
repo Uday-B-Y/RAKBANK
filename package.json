@@ -1,0 +1,51 @@
+{
+  "name": "tinubu-e2e",
+  "version": "1.0.0",
+  "description": "Tinubu E2E Testing Framework — CAF Architecture with Playwright",
+  "scripts": {
+    "test": "node -r dotenv/config ./node_modules/@playwright/test/cli.js test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:trace": "playwright test --trace on",
+    "test:report": "playwright show-report",
+    "new-flow": "ts-node scripts/new-flow.ts",
+    "generate-registry": "ts-node scripts/generate-registry.ts",
+    "check:selectors": "ts-node scripts/detect-unstable-selectors.ts",
+    "check:registry": "ts-node scripts/check-registry-conflicts.ts",
+    "check:duplicates": "ts-node scripts/detect-duplicate-files.ts",
+    "check:governance": "ts-node scripts/check-manual-pages.ts",
+    "lint:caf": "ts-node scripts/caf-linter.ts",
+    "ci:gate": "ts-node scripts/ci-gate.ts",
+    "ci:fallback-check": "ts-node scripts/fallback-threshold-check.ts",
+    "ci:locator-score": "ts-node scripts/locator-score-check.ts",
+    "ci:lifecycle": "ts-node scripts/selector-lifecycle.ts",
+    "ci:flake-triage": "ts-node scripts/flake-triage.ts --ci",
+    "flake-triage": "ts-node scripts/flake-triage.ts",
+    "release-confidence": "ts-node scripts/release-confidence.ts",
+    "repair:selector": "ts-node scripts/selector-repair.ts",
+    "repair:pipeline": "ts-node scripts/auto-repair-pipeline.ts"
+  },
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "tinubu",
+    "caf"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  }
+}

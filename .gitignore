@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+storageState.json
+setup-data.json
+selector-usage.json
+test-results/
+playwright-report/
+reports/
+blob-report/
+*.caf-selector-lifecycle.json
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
